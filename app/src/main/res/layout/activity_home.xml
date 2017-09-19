@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.invariant.safephrase.GUI.home.Home"
+    android:id="@+id/home_layout">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/home_bg"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/home_bg"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription"
+        android:clickable="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_box"
+        android:layout_alignTop="@+id/home_bg"
+        android:layout_alignStart="@+id/home_bg"
+        android:src="@drawable/title_box"
+        android:layout_alignEnd="@+id/home_bg"
+        android:layout_marginTop="10dp"
+        android:clickable="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/camera_btn"
+        android:layout_below="@+id/title_box"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/camera_btn"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onActionBtnClick" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_btn"
+        android:src="@drawable/video_btn"
+        android:layout_below="@+id/title_box"
+        android:layout_toEndOf="@+id/camera_btn"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onActionBtnClick" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/record_btn"
+        android:src="@drawable/record_btn"
+        android:layout_below="@+id/title_box"
+        android:layout_toEndOf="@+id/video_btn"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onActionBtnClick" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_btn"
+        android:src="@drawable/phone_btn"
+        android:layout_below="@+id/title_box"
+        android:layout_toEndOf="@+id/record_btn"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onActionBtnClick" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divider"
+        android:layout_below="@+id/camera_btn"
+        android:layout_alignStart="@+id/home_bg"
+        android:background="#9a9a9a"
+        android:layout_marginTop="10dp"
+        android:alpha="0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:id="@+id/selection_slider"
+        android:layout_below="@+id/camera_btn"
+        android:layout_alignStart="@+id/camera_btn"
+        android:layout_toStartOf="@+id/video_btn"
+        android:background="#ff6b46" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phrase_list_view"
+        android:layout_below="@+id/divider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/home_bg"
+        android:src="@drawable/add_btn"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="10dp"
+        android:clickable="true"
+        android:onClick="onAddBtnClick" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/settings_icon"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/add_btn"
+        android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:onClick="onSettingsBtnClick" />
+
+</RelativeLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="#eaeaea"
+    android:id="@+id/add_phrase_dialog_layout">
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/phrase_field"
+        android:textColor="#0e0e0e"
+        android:hint="Phrase"
+        android:textColorHint="#a6a6a6"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD PHRASE"
+        android:id="@+id/add_btn"
+        android:background="@android:color/holo_blue_light"
+        android:layout_below="@+id/space"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_lbl"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Please enter a phrase of 4 words or more. All words must be real words available in the English Dictionary and the phrase must not contain any punctation. Try to make each word unique and sound different than the rest. Following these rules will help avoid false alarms (phrases being falsely detected)."
+        android:textColor="#0e0e0e" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ADD A PHRASE"
+        android:id="@+id/title_lbl"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/holo_red_light"
+        android:textSize="20sp"
+        android:gravity="fill_vertical|center_horizontal"
+        android:layout_height="50dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/error_lbl"
+        android:id="@+id/space" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_lbl"
+        android:layout_alignParentStart="true"
+        android:id="@+id/phone_group"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter the phone number to call when the phrase is said:"
+            android:id="@+id/textView3"
+            android:textColor="#0e0e0e"
+            android:gravity="center_horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/phone_field"
+            android:textColor="#0e0e0e"
+            android:textColorHint="#a6a6a6"
+            android:hint="Phone"
+            android:layout_marginLeft="0dp"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_lbl"
+        android:layout_alignParentStart="true"
+        android:id="@+id/recording_radio_group"
+        android:visibility="gone">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START RECORDING"
+            android:id="@+id/start_recording_btn"
+            android:textColor="#313131"
+            android:buttonTint="#313131"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STOP RECORDING"
+            android:id="@+id/stop_recording_btn"
+            android:textColor="#313131"
+            android:buttonTint="#313131"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOTH"
+            android:id="@+id/both_recording_btn"
+            android:textColor="#313131"
+            android:buttonTint="#313131"
+            android:checked="true" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/error_lbl"
+        android:layout_alignParentStart="true"
+        android:id="@+id/camera_radio_group"
+        android:visibility="gone">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FRONT CAMERA"
+            android:id="@+id/front_camera_btn"
+            android:textColor="#313131"
+            android:buttonTint="#313131"
+            android:checked="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BACK CAMERA"
+            android:id="@+id/back_camera_btn"
+            android:textColor="#313131"
+            android:buttonTint="#313131"
+            android:checked="false" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error_lbl"
+        android:layout_alignParentStart="true"
+        android:textColor="#db0000"
+        android:layout_below="@+id/phrase_field"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
